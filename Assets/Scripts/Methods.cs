@@ -11,6 +11,8 @@ public class Methods : MonoBehaviour
     public GameObject labClickUpgradesTab;
     public GameObject labProductionUpgradesTab;
 
+    public GameObject mainIcons;
+
 
     public void ChangeTabs(string name)
     {
@@ -21,6 +23,8 @@ public class Methods : MonoBehaviour
                 {
                     labClickUpgradesTab.gameObject.SetActive(true);
                     mainUpgradesTab.gameObject.SetActive(true);
+
+                    mainIcons.SetActive(false);
                     break;
                 }
             case "changeLocationTab":
@@ -38,12 +42,16 @@ public class Methods : MonoBehaviour
                 {
                     mainUpgradesTab.gameObject.SetActive(true);
                     labClickUpgradesTab.gameObject.SetActive(true);
+
+                    mainIcons.SetActive(false);
                     break;
                 }   
             case "labProductionUpgradesTab":
                 {
                     mainUpgradesTab.gameObject.SetActive(true);
                     labProductionUpgradesTab.gameObject.SetActive(true);
+
+                    mainIcons.SetActive(false);
                     break;
                 }
         }
